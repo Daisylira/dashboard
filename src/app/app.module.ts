@@ -7,6 +7,15 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { TransacaoComponent } from './transacao/transacao.component';
 import { ExtratoComponent } from './extrato/extrato.component';
 
+import {LOCALE_ID} from '@angular/core';
+import localePt from '@angular/common/locales/pt';
+import {registerLocaleData} from '@angular/common';
+
+registerLocaleData(localePt, 'pt');
+
+
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -18,7 +27,7 @@ import { ExtratoComponent } from './extrato/extrato.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [{provide: LOCALE_ID, useValue: 'pt-BR'}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,3 +1,18 @@
+
+.transacao{
+    margin: 1.5%;
+    width: 30%;
+}
+
+.extrato{
+    width: 70%;
+    margin: 1.5%;
+}
+
+.conteudo{
+    display: flex;
+}
+
 .card{
     border: 1px solid grey;
     border-radius: 7px;
@@ -38,4 +53,67 @@ label{
 
 
    
+}
+
+.th-1{
+    width: 10em;
+    text-align: center;
+}
+.th-2{
+    width: 60em;
+    text-align: left;
+}
+.th-3{
+    width: 30em;
+    text-align: right;
+}
+
+
+.table-bordered thead td, .table-bordered thead th {
+    border-bottom-width: 2px;
+}
+
+.table thead th {
+    vertical-align: bottom;
+    border-bottom: 2px solid #dee2e6;
+}
+.table-bordered td, .table-bordered th {
+    border-bottom: 1px solid #dee2e6;
+}
+.table td, .table th {
+    padding: .75rem;
+    vertical-align: top;    
+}
+th {
+    text-align: inherit;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+th {
+    display: table-cell;
+    vertical-align: inherit;
+    font-weight: bold;
+    text-align: -internal-center;
+}
+.table {
+    width: 100%;
+    margin-bottom: 1rem;
+    color: #212529;
+}
+table {
+    border-collapse: collapse;
+}
+
+
+.total{
+   border-top: double #dee2e6;
+    border-bottom: none !important;
+}
+
+.tipo-resultado{
+    margin: 0px;
+    font-weight: normal;
+    
 }

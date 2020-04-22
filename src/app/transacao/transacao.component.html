@@ -1,18 +1,64 @@
-<div class="card">
 
-    <p class="title">Nova transação</p>
 
-    <div class="form-group">
+<div class="conteudo">
+    <div class="transacao">
+        <div class="card">
 
-        <label for="transação">Tipo de transação</label>
-        <input type="text" class="form" placeholder="Compra">
-
-        <label for="mercadoria">Nome da mercadoria</label>
-        <input type="text" class="form" placeholder="Input">
-
-        <label for="valor">Valor</label>
-        <input type="text" class="form"  placeholder="R$ 0,00">
-
+            <p class="title">Nova transação</p>
+        
+            <div class="form-group">
+        
+                <label for="transação">Tipo de transação</label>
+                <input type="text" class="form" placeholder="Compra">
+        
+                <label for="mercadoria">Nome da mercadoria</label>
+                <input type="text" class="form" placeholder="Input">
+        
+                <label for="valor">Valor</label>
+                <input type="text" class="form"  placeholder="R$ 0,00">
+        
+            </div>
+        
+        </div>
+    
     </div>
+    
+    
+    <div class="extrato">
+        <div class="extrato">
 
+            <p class="title">
+        
+                Extrato de transações
+            </p>
+        
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th class="th-1"></th>
+                        <th class="th-2">Mercadoria</th>
+                        <th class="th-3">Valor</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let e of extrato">
+                        <td class="th-1">{{e.tipo}}</td>
+                        <td class="th-2">{{e.mercadoria}}</td>
+                        <td class="th-3">{{e.valor | currency:'BRL':true}}</td>
+                    </tr>
+        
+                </tbody>
+        
+                <thead>
+                    <tr>
+                        <th class="total"></th>
+                        <th class="total">Total</th>
+                        <th class="total th-3">{{saldo | currency:'BRL':true}} <p class="tipo-resultado">lucro</p>
+                        </th>
+                    </tr>
+                </thead>
+            </table>
+        </div>
+    
+    </div>
 </div>
